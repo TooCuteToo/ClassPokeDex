@@ -1,0 +1,75 @@
+@import '../index.scss';
+
+$purple : #512DA8;
+$blue : #1976D2;
+$l_orange : #FBC02D;
+$brick : #FF5722;
+
+@mixin buttonBG($bg) {
+  border: 2px solid $bg;
+  color: $bg;
+  &:hover {
+    background-color: $bg;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.container {
+	width: 70%;
+	display: flex;
+	margin: 2em auto;
+	justify-content: space-around;
+	align-items: center;
+
+	.skewBtn {
+    width: 120px;
+    height: 60px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transition: .5s;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-family: "Lato",sans-serif;
+    &:hover{
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      transform:scale(1.1);
+    }
+  }
+}
+
+/* Buttons */
+.purple {
+  @include buttonBG($purple);
+}
+.blue {
+  @include buttonBG($blue);
+}
+.lorange {
+  @include buttonBG($l_orange);
+}
+.brick {
+  @include buttonBG($brick);
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 90%;
+    justify-content: space-between;
+
+    .skewBtn {
+      width: 80px;
+      height: 60px;
+      font-size: 1rem;
+
+      &:hover{
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        transform:scale(1.1);
+      }
+    }
+  }
+}

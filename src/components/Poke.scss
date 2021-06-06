@@ -1,0 +1,81 @@
+@import '../index.scss';
+
+/* Poke-card */
+.pokemon {
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 0.6em;
+	padding: 1.25em;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+	.info {
+		margin-top: 1.6em;
+		font-size: 0.8rem;
+	}
+
+	.number {
+		background-color: rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		font-size: 10px;
+		padding: 0.3em 0.6em;
+	}
+
+	.name {
+		margin: 0.9em 0 0.4em 0.4em;
+		letter-spacing: 1px;
+	}
+}
+
+.pokemon .img-container {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+
+	img {
+		margin-top: 1.25em;
+		max-width: 90%;
+	}
+}
+
+/* Poke-stats */
+.stats {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	bottom: -300px;
+	left: 0;
+	transition: all 1s ease;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	background: #eee;
+	text-align: left;
+}
+
+.show {
+	bottom: 0;
+	left: 0;
+}
+
+.stats-container-img img {
+	max-width: 50%;
+	display: block;
+	margin: 1em auto 0.5em auto;
+}
+
+.stats-info {
+	width: 80%;
+	max-width: 400px;
+	margin: auto;
+	font-size: 0.78rem;
+	padding: 0.5em;
+	border: 1px solid black;
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 1.2em;
+}
+
